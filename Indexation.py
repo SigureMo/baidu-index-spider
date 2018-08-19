@@ -6,8 +6,7 @@ import time
 from urllib import parse
 
 from baidulogin import login,getcookies
-from siguretools.network_file import Networkfile
-from siguretools.config import Config
+from tools.config import Config
 
 class BaiduIndex():
     def __init__(self,words,span):

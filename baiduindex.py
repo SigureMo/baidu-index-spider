@@ -41,7 +41,7 @@ if __name__=='__main__':
                 num+=1
         kws.append(words)
     ls=[['关键词','开始时间','结束时间','时间跨度（日）','整体均值','PC均值','移动均值']]
-    indexs=[]
+    indexes=[]
     for kw in kws:
         print('当前收集词语：'+','.join(list(map(lambda x:x[0],kw))))
         while True:
@@ -54,8 +54,9 @@ if __name__=='__main__':
                     print('模式参数有误！名称：{} 位置：第{}行'.format(kw[0][0],kws.index(kw)+3))
                 time.sleep(3)
                 break
-            except:
+            except TypeError:
                 print('数据请求发生错误，正在尝试重新获取cookies...')
+                print(e)
                 getcookies()
                 
             

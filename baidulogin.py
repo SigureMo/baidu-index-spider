@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from siguretools.config import Config
+from tools.config import Config
 import time
 import json
 import os
