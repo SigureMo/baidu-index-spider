@@ -62,6 +62,8 @@ if __name__=='__main__':
             
     for index in indexes:
         ls.append(index.average())
+    if not os.path.exists('output'):
+        os.mkdir('output')
     with open('output/'+time.strftime('%Y%m%d%H%M%S',time.localtime(time.time()))+'.csv','w') as f:
         s=''
         for l in ls:
